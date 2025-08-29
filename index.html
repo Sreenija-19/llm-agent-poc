@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM Agent POC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #conversation { height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    .agent-msg { color: blue; }
+    .user-msg { color: green; text-align: right; }
+  </style>
+</head>
+<body class="p-3">
+  <h2>LLM Agent POC</h2>
+  <select id="modelPicker" class="form-select mb-2">
+    <option value="gpt-4">GPT-4</option>
+    <option value="gpt-3.5">GPT-3.5</option>
+  </select>
+  <div id="conversation"></div>
+  <input id="userInput" class="form-control" placeholder="Type your message..." />
+  <button id="sendBtn" class="btn btn-primary mt-2">Send</button>
+  <div id="alertContainer" class="mt-2"></div>
+
+  <script src="agent.js"></script>
+</body>
+</html>
